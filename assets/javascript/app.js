@@ -1,114 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset='utf-8'>
-		<title>GifTastic Project</title>
-		
-		<script
-		src="http://code.jquery.com/jquery-3.2.1.js"
-		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-		crossorigin="anonymous"></script>
-		<!--Bootstrap-->
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		
-		<!-- animate css  -->
-  		<link rel="stylesheet"
-  		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-  		integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
-  		crossorigin="anonymous">
-
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-
-		</script>
-		<style>
-			body { 
-				background-color: paleturquoise;
-			}
-
-			.jumbotron{
-				background-image: url('../GIFTastic/water.jpg');
-				background-repeat: no-repeat;
-				background-position: center; 
-			}
-
-			h1 {
-				text-align: center;
-				font-family: Arial, sans-serif;
-				font-size: 36px;
-				padding-bottom: 10px;
-			}
-			p {
-				font-family: Arial, sans-serif;
-				text-align: center;
-				font-size: 20px;
-				font-style: bolder;
-				padding-bottom: 10px;
-			}
-
-			button {
-				margin: 5px;
-				text-align: center;
-			}
-
-			#buttons-view {
-				margin: 0 ,auto;
-				clear: both;
-				margin-left: 25%;
-				margin-right: 25%;
-				margin-bottom: 25px;
-			}
-
-			#GIFview {
-				display: inline-block;
-			}
-			#topic-form {
-				font-family: Arial, sans-serif;
-				text-align: center;
-				font-size: 18px;
-				padding-bottom: 10px;
-			}
-			
-			img{
-				height: 250px;
-				width: 350px;
-				padding:1px;
-   				border:2px solid turquoise;
-				background-color: turquoise;
-			}
-		</style>
-	</head>
-	<body>
-		<div class = 'container-center'>
-			
-			<div class="jumbotron">
-				<h1> This Is GIFTastic <span class="glyphicon glyphicon-gift"></span></h1>
-			</div>
-
-			<!-- buttons -->
-			<form id = "topic-form">
-				<label for = "topic-input"> Pick A Topic </label>
-				<input type= "text" id = "topic-input"><br>
-				<!--Button triggers new topic to be added-->
-				<input id ="add-topic" class='btn btn-primary' type = "submit" value = "Submit">
-			</form>
-
-			<!-- Rendered buttons will get dumped here  -->
-			<div id="buttons-view"></div>
-	
-			<!-- Topic gifs will Get Dumped Dere -->
-			<div id="topics-view"></div>
-		</div>
-	
-<!-- Javascript/jQuery begins -->
-<script type="text/javascript">
-
-
 // Animate gifs
 
 $(document).on('click', 'img', function(event) {
@@ -134,7 +23,7 @@ setTimeout(function(){
 	
 			//initial array of topics
 			var topics = ["Corgi Puppies", "Lego Batman", "Mickey and Minnie", "Bugs Bunny", "Simpsons",
-				"Ice Cream", "Futurama", "Ron Swanson", "Ninjago", "Classic Disney Cartoons"];
+				"Yo-Kai Watch", "Futurama", "Ron Swanson", "Ninjago", "Classic Disney Cartoons"];
 			
 			//displayTopicInfo function re-renders HTML to display appropriate content
 			function displayTopicInfo() {
@@ -216,8 +105,3 @@ setTimeout(function(){
 					
 					// Calling the renderButtons function to display the intial buttons
 					renderButtons();
-
-	</script>
-							
-</body>
-</html>
